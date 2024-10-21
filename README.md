@@ -1,33 +1,50 @@
-# Project
+# Overview of the basic declarative agent template
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+## Build a basic declarative agent
 
-As the maintainer of this project, please make a few updates:
+With the declarative agent, you can build a custom version of Copilot that can be used for specific scenarios, such as for specialized knowledge, implementing specific processes, or simply to save time by reusing a set of AI prompts. For example, a grocery shopping Copilot declarative agent can be used to create a grocery list based on a meal plan that you send to Copilot.
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+## Get started with the template
 
-## Contributing
+> **Prerequisites**
+>
+> To run this app template in your local dev machine, you will need:
+>
+> - [Node.js](https://nodejs.org/), supported versions: 16, 18
+> - A [Microsoft 365 account for development](https://docs.microsoft.com/microsoftteams/platform/toolkit/accounts).
+> - [Teams Toolkit Visual Studio Code Extension](https://aka.ms/teams-toolkit) version 5.0.0 and higher or [Teams Toolkit CLI](https://aka.ms/teamsfx-toolkit-cli)
+> - [Microsoft 365 Copilot license](https://learn.microsoft.com/microsoft-365-copilot/extensibility/prerequisites#prerequisites)
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+![image](https://github.com/user-attachments/assets/e1c2a3b3-2e59-4e9b-8335-19315e92ba30)
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+1. First, select the Teams Toolkit icon on the left in the VS Code toolbar.
+2. In the Account section, sign in with your [Microsoft 365 account](https://docs.microsoft.com/microsoftteams/platform/toolkit/accounts) if you haven't already.
+3. Create Teams app by clicking `Provision` in "Lifecycle" section.
+4. Select `Preview in Copilot (Edge)` or `Preview in Copilot (Chrome)` from the launch configuration dropdown.
+5. Once the Copilot app is loaded in the browser, click on the "…" menu and select "Copilot chats". You will see your declarative agent on the right rail. Clicking on it will change the experience to showcase the logo and name of your declarative agent.
+6. Ask a question to your declarative agent and it should respond based on the instructions provided.
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+## What's included in the template
 
-## Trademarks
+| Folder       | Contents                                                                                 |
+| ------------ | ---------------------------------------------------------------------------------------- |
+| `.vscode`    | VSCode files for debugging                                                               |
+| `appPackage` | Templates for the Teams application manifest, the GPT manifest and the API specification |
+| `env`        | Environment files                                                                        |
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's policies.
+The following files can be customized and demonstrate an example implementation to get you started.
+
+| File                                 | Contents                                                                       |
+| ------------------------------------ | ------------------------------------------------------------------------------ |
+| `appPackage/declarativeAgent.json` | Define the behaviour and configurations of the declarative agent.            |
+| `appPackage/manifest.json`           | Teams application manifest that defines metadata for your declarative agent. |
+
+The following are Teams Toolkit specific project files. You can [visit a complete guide on Github](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#overview) to understand how Teams Toolkit works.
+
+| File           | Contents                                                                                                                                  |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `teamsapp.yml` | This is the main Teams Toolkit project file. The project file defines two primary things: Properties and configuration Stage definitions. |
+
+## Addition information and references
+
+- [Declarative agents for Microsoft 365](https://aka.ms/teams-toolkit-declarative-agent)
